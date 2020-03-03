@@ -9,8 +9,8 @@ class NeuralNetwork:
         self.hidden_nodes = hidden_nodes
         self.output_nodes = output_nodes
         self.learning_rate = learning_rate
-        self.w_ih = np.random.normal(0, pow(self.hidden_nodes, 0.5), (self.hidden_nodes, self.input_nodes))
-        self.w_ho = np.random.normal(0, pow(self.output_nodes, 0.5), (self.output_nodes, self.hidden_nodes))
+        self.w_ih = np.random.normal(0, pow(self.hidden_nodes, -0.5), (self.hidden_nodes, self.input_nodes))
+        self.w_ho = np.random.normal(0, pow(self.output_nodes, -0.5), (self.output_nodes, self.hidden_nodes))
         self.activation_function = activation.sigmoid
 
     def train(self, inputs, targets):
