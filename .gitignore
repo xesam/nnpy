@@ -2,3 +2,5 @@
 .ipynb_checkpoints
 *.iml
 venv
+__pycache__
+*.pyc
